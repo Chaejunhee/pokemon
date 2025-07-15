@@ -17,7 +17,7 @@ options.add_argument("--headless") #창없음
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 url = "https://pokemonkorea.co.kr/pokedex"
-driver = wb.Chrome()
+driver = wb.Chrome(options=options)
 driver.maximize_window()
 driver.get(url)
 img = driver.find_element(By.CSS_SELECTOR, "img.img-fluid")
